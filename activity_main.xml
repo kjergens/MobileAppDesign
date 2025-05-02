@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logoView"
+                android:layout_width="67dp"
+                android:layout_height="52dp"
+                android:cropToPadding="true" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@android:style/Widget.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:fontFamily="sans-serif-black"
+                android:text="HomeDog"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/messageView"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:text="Welcome!"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="322dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:fontFamily="monospace"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:text="@tools:sample/full_names" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/adoptBtn"
+                android:layout_width="170dp"
+                android:layout_height="61dp"
+                android:onClick="adopt"
+                android:text="Adopt" />
+
+            <Button
+                android:id="@+id/nextBtn"
+                android:layout_width="170dp"
+                android:layout_height="61dp"
+                android:onClick="next"
+                android:text="Next"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/countView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
